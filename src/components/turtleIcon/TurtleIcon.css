@@ -1,0 +1,23 @@
+.turtle-wrapper{
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+  transition: transform 0.5s cubic-bezier(.22,1,.36,1);
+}
+
+.turtle-icon {
+  height: 15vmin;
+  pointer-events: none;
+}
+
+
+/* Jump animation adds movement ON TOP of the wrapper's position */
+.jump {
+  animation: turtleJump 0.5s ease-out;
+}
+
+@keyframes turtleJump {
+  0%   { transform: translate(0, 0) rotate(0); }
+  40%  { transform: translate(5%, -50%) rotate(-8deg); }
+  100% { transform: translate(5%, 0) rotate(0); }
+}
