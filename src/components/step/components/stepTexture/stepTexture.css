@@ -1,65 +1,38 @@
 .step{
-  /* width: 10%; */
+  width: 10%;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 
 }
-.step-container{
-  height: 100%;
-  width: 60px;
-}
-
-.step-number{
-  margin-top: 30px;
-  margin-bottom: 5px;
-}
 
 .top-step{
-  height: 19px;
+  height: 30px;
   background-color: #76bf30;
   border-radius: 6px;
   border: 2px solid black;
 }
 
-@media (max-width: 600px) {
-  /* Your styles for small screens */
-  .top-step {
-    height: 19px;
-  }
-}
-
-.bottom-step{
+.bottom-step-container{
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.bottom-texture-container{
-  display: flex;
-  justify-content: space-between;
+.bottom-step{
   height: 100%;
-  gap: 16px;
+  width: 80%;
   background-color: #76bf30;
   border-right: 2px solid black;
   border-left: 2px solid black;
   border-bottom: 2px solid black;
-}
-.top-texture-container{
-  display: flex;
-  height: 100%;
-  gap: 16px;
 }
 
 .inner-step-wrapper{
   display: flex;
   width: 100%;
   height: 100%;
-  gap: 3px;
-}
-
-.flex-end{
-  justify-content: end;
+  gap: 8px;
 }
 
 .top-radius{
@@ -67,28 +40,13 @@
   border-bottom-left-radius: 4px;
 }
 
-.top-radius-right{
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-.medium{
-  width: 7px;
-  height: 100%;
-}
-
 .big{
-  width: 9px;
+  width: 5%;
   height: 100%;
 }
 
 .small{
-  width: 2px;
-  height: 100%;
-}
-
-.extra-small{
-  width: 2px;
+  width: 15%;
   height: 100%;
 }
 
@@ -99,6 +57,8 @@
 .left-side-color{
   background-color: #cff97d;
 }
+
+
 
 .height-1{
   margin-left: 2%;

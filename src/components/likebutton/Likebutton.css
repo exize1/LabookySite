@@ -13,14 +13,14 @@
 }
 
 .like-icon {
-  height: 15vmin;
+  height: 18vmin;
   pointer-events: pointer;
   transition: transform 0.3s;
 }
 
 
 .like-button {
-  padding: 10px 20px;
+  padding: 0;
   background: none;
   border: none;
   cursor: pointer;
