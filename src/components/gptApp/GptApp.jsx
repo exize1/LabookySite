@@ -1,46 +1,52 @@
-import { useState } from "react";
-import turtleImg from "../../assets/turtle.png";
+import React, { useState, useRef, useEffect } from "react";
 import "./GptApp.css";
 
-function GptApp() {
-  const [step, setStep] = useState(0);
-  const [jump, setJump] = useState(false);
+export default function TurtleJump() {
+  const [currentStep, setCurrentStep] = useState(0);
+  const turtleRef = useRef(null);
+  const stepsRef = useRef([]);
 
-  const increaseStep = () => {
-    if (step >= 4) return;
+  useEffect(() => {
+    if (currentStep === 0) return;
 
-    setJump(true);
-    setTimeout(() => setJump(false), 600); // remove jump class
-    setStep(step + 1);
+    const turtle = turtleRef.current;
+    const step = stepsRef.current[currentStep - 1];
+    const game = document.querySelector(".game-container");
+
+    if (!turtle || !step || !game) return;
+
+    const stepRect = step.getBoundingClientRect();
+    const gameRect = game.getBoundingClientRect();
+
+    const x = stepRect.left - gameRect.left + stepRect.width * 0.2;
+    const y = gameRect.bottom - stepRect.top;
+
+    turtle.style.left = `${x}px`;
+    turtle.style.bottom = `${y - 20}px`;
+  }, [currentStep]);
+
+  const jump = () => {
+    if (currentStep < 4) {
+      setCurrentStep(currentStep + 1);
+    }
   };
 
-  // horizontal + vertical targets (pixel offsets)
-  const x = step * 120; 
-  const y = step * -60;
   return (
-    <div className="app">
-      <div className="scene">
+    <div className="game-container">
+      <div className="turtle" ref={turtleRef}></div>
 
-        <img
-          src={turtleImg}
-          alt="turtle"
-          className={`turtle ${jump ? "jump" : ""}`}
-          style={{ transform: `translate(${x}px, ${y}px)` }}
-        />
-
-        <div className="steps">
-          <div className="step h1" />
-          <div className="step h2" />
-          <div className="step h3" />
-          <div className="step h4" />
-          <div className="step h5" />
-        </div>
-
+      <div className="steps">
+        {[12, 18, 24, 32].map((height, i) => (
+          <div
+            key={i}
+            className="step"
+            style={{ height: `${height}vh` }}
+            ref={(el) => (stepsRef.current[i] = el)}
+          ></div>
+        ))}
       </div>
 
-      <button className="heart-btn" onClick={increaseStep}>❤️</button>
+      <button className="jump-btn" onClick={jump}>JUMP</button>
     </div>
   );
 }
-
-export default GptApp;

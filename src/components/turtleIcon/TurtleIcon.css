@@ -1,12 +1,12 @@
 .turtle-wrapper{
   position: absolute;
-  left: 5%;
-  bottom: 0;
-  transition: transform 0.5s cubic-bezier(.22,1,.36,1);
+  z-index: 0;
+  left: 3%;
+  bottom: calc(-7% - 19px);
 }
 
 .turtle-icon {
-  height: 15vmin;
+  height: 8vmax;
   pointer-events: none;
 }
 

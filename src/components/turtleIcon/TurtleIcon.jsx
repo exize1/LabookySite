@@ -1,14 +1,17 @@
 import './TurtleIcon.css';
 import turtle from '../../assets/turtle.png';
+import React from 'react';
 
-function TurtleIcon({ step, jump }) {
+const TurtleIcon =  React.forwardRef(({ step, jump }, ref) => {
 
-  const x = step * 130; 
-  const y = step * -40;
-
+  // const x = step * 10; 
+  // const y = step * -7;
+  
   return (
-    <div className='turtle-wrapper'
-      style={{ transform: `translate(${x}%, ${y}%)` }}
+    <div 
+      ref={ref}
+      className='turtle-wrapper'
+      // style={{ transform: `translate(${x}vmax, ${y}vmax)` }}
     >
         <img 
           src={turtle} 
@@ -17,6 +20,6 @@ function TurtleIcon({ step, jump }) {
       />
     </div>
   );
-}
+})
 
 export default TurtleIcon;

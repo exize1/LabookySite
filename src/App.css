@@ -7,19 +7,22 @@
 }
 
 .body{
-  height: 60%;
+  height: 75%;
 }
 
 .footer{
-  height: 10%;
+  height: 5%;
 }
 
 .main-content{
-  height: 40%;
+  padding-top: 10%;
+  height: 60%;
 }
 
 .App-backgroun {
-  background-color: #282c34;
+  background-image: url('/src/assets/Background.png');
+  background-position: 0%;
+  background-size: cover;
   height: 100vh;
   color: white;
 }
@@ -39,14 +42,15 @@
   width: 100%;
   height: 50%;
   display: flex;
+  justify-content: space-evenly;
   flex-direction: row;
   align-items: end;
   margin-left: 20%;
-  gap: 20px;
+  gap: 5%;
 }
 
 .buttons-container{
-  height: 100%;
+  /* height: 100%; */
 }
 
 .buttons{

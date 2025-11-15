@@ -1,71 +1,35 @@
-.app {
-  background: #2c2f36;
-  width: 100vw;
-  height: 100vh;
+.game-container {
+  width: 100%;
+  height: 70vh;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  padding: 2rem;
 }
 
 .steps-wrapper {
   display: flex;
-  align-items: flex-end;
-  gap: 20px;
-  margin-bottom: 80px;
+  gap: 3vw;
+  margin-left: 12vw;
 }
 
 .turtle {
-  width: 80px;
-  transition: margin-bottom 0.4s ease;
+  width: 70px;
+  position: absolute;
+  bottom: 0;
+  left: 2vw;
+  transition: all 0.6s ease-in-out;
 }
 
-/* Jump animation */
-.turtle {
-  width: 80px;
-  transition: margin-bottom 0.4s ease, margin-left 0.4s ease;
-}
-
-.jump {
-  animation: jumpDiagonal 0.5s ease;
-}
-
-@keyframes jumpDiagonal {
-  0%   { transform: translate(0, 0) rotate(0deg); }
-  35%  { transform: translate(25px, -45px) rotate(-8deg); }
-  70%  { transform: translate(50px, -10px) rotate(4deg); }
-  100% { transform: translate(0, 0) rotate(0deg); }
-}
-
-
-
-.steps {
-  display: flex;
-  align-items: flex-end;
-  gap: 20px;
-}
-
-.step {
-  width: 90px;
-  background: #61d3ff;
-  border-radius: 10px;
-}
-
-/* Heights for each step */
-.height-1 { height: 60px; }
-.height-2 { height: 120px; }
-.height-3 { height: 180px; }
-.height-4 { height: 240px; }
-.height-5 { height: 300px; }
-
-.heart-btn {
-  font-size: 40px;
-  background: none;
+.jump-btn {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  border-radius: 40px;
   border: none;
+  background: #ff4f8b;
+  color: white;
   cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.heart-btn:hover {
-  transform: scale(1.2);
 }
