@@ -7,11 +7,15 @@ import TurtleIcon from "./components/turtleIcon/TurtleIcon";
 import likeIcon from './assets/likeIcon.png';
 import restart from './assets/restart.png';
 import logo from './assets/logo.png';
+import Modal from "./components/modal/Modal";
+import { ANNOUNCEMENTS } from "./consts/announcemenets";
 
 function App() {
   const [currentStep, setCurrentStep] = useState(0);
   const [jump, setJump] = useState(false);
   const [blocked, setBlocked] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [showStartModal, setShowStartModal] = useState(true);
   const turtleRef = useRef(null);
   const stepsRef = useRef([]);
 
@@ -49,6 +53,11 @@ function App() {
     turtle.style.left = `${x}px`;
     turtle.style.bottom = `${y - 20}px`;
     turtle.style.transition = `left 0.5s cubic-bezier(.22,1,.36,1), bottom 0.5s cubic-bezier(.22,1,.36,1)`;
+    if (currentStep === 4) {
+      setTimeout(() => {
+        setShowModal(true);
+      }, 300);
+    }
   }, [currentStep]);
   
   return (
@@ -62,6 +71,22 @@ function App() {
         <div className='body'>
           <div className="main-content">
             {/* <GptApp currentStep={step} /> */}
+              <Modal
+                isOpen={showModal}
+                title={ANNOUNCEMENTS.REWARD.title}
+                message={ANNOUNCEMENTS.REWARD.message}
+                confirmText={ANNOUNCEMENTS.REWARD.confirmText}
+                onConfirm={() => setShowModal(false)}
+                onClose={() => setShowModal(false)}
+              />
+              <Modal
+                isOpen={showStartModal}
+                title={ANNOUNCEMENTS.WELCOME.title}
+                message={ANNOUNCEMENTS.WELCOME.message}
+                confirmText={ANNOUNCEMENTS.WELCOME.confirmText}
+                onConfirm={() => setShowStartModal(false)}
+                onClose={() => setShowStartModal(false)}
+              />
             <div className='steps-container'>
                 <TurtleIcon 
                   ref={turtleRef}
