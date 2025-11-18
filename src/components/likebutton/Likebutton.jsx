@@ -5,7 +5,7 @@ function LikeButton({ increaseStep, blocked, icon, animationDisabled, height=20 
 
   return (
     <button className={`like-button ${animationDisabled ? 'disabled' : ''}`} onClick={increaseStep} disabled={blocked}>
-        <img src={icon} className="like-icon" alt="logo" style={{ height: `${height}vmin` }} />
+        <img src={icon} className="like-icon" alt="logo" style={{ height: `${height}vh` }} />
     </button>
   );
 }

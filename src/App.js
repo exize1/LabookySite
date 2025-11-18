@@ -94,10 +94,10 @@ function App() {
                   jump={jump} 
                 />
               <div className='steps'>
-                <Step height={'height-1'} step={7} ref={(el) => (stepsRef.current[0] = el)}/>
-                <Step height={'height-2'} step={8} ref={(el) => (stepsRef.current[1] = el)}/>
-                <Step height={'height-3'} step={9} ref={(el) => (stepsRef.current[2] = el)}/>
-                <Step height={'height-4'} step={10} ref={(el) => (stepsRef.current[3] = el)}/>
+                <Step height={'height-1'} label={7} ref={(el) => (stepsRef.current[0] = el)}/>
+                <Step height={'height-2'} label={8} ref={(el) => (stepsRef.current[1] = el)}/>
+                <Step height={'height-3'} label={9} ref={(el) => (stepsRef.current[2] = el)}/>
+                <Step height={'height-4'} label={10} ref={(el) => (stepsRef.current[3] = el)}/>
               </div>
             </div>
             <div className='buttons-container'>
@@ -106,12 +106,12 @@ function App() {
                   increaseStep={increaseStep} 
                   blocked={blocked}
                   icon={likeIcon} 
-                  height={20}/>
+                  height={7}/>
                 <LikeButton 
                   animationDisabled={true}
                   increaseStep={() => setCurrentStep(0)}
                   icon={restart}
-                  height={12} 
+                  height={7} 
                 />
             </div>
             </div>

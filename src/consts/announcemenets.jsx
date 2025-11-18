@@ -1,12 +1,12 @@
 export const ANNOUNCEMENTS = {
   WELCOME: {
     title: "ברוכים הבאים ללבוקי!",
-    message: "אהבתם את לבוקי? \n הקפיצו אותו במעלה הדרגות!",
+    message: "אהבתם את לבוקי? \n הקפיצו אותו לפי הדירוג שלכם 😊",
     confirmText: "סבבה"
   },
   REWARD: {
-    title: "זכית!",
-    message: "מוזמנים לבוא לעמדת תצוגה לקבל את הפרס שלכם",
+    title: "איזה כיף🎁",
+    message: "זכיתם! בואו לעמדת תצוגה לקבל את הפרס שלכם 😊",
     confirmText: "יש!!"
   }
 };  
