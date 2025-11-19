@@ -78,6 +78,7 @@ function App() {
                 confirmText={ANNOUNCEMENTS.REWARD.confirmText}
                 onConfirm={() => setShowModal(false)}
                 onClose={() => setShowModal(false)}
+                isWin={true}
               />
               <Modal
                 isOpen={showStartModal}
