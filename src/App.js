@@ -37,7 +37,7 @@ function App() {
     const step = stepsRef.current[currentStep - 1];
     const game = document.querySelector(".main-content");
     if (currentStep === 0) {
-      turtle.style.left = `3%`;
+      turtle.style.left = `2%`;
       turtle.style.bottom = `calc(-7% - 19px)`;
       return;
     }

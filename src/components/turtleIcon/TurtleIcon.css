@@ -1,8 +1,6 @@
 .turtle-wrapper{
   position: absolute;
   z-index: 0;
-  left: 3%;
-  bottom: calc(-7% - 19px);
 }
 
 .turtle-icon {
