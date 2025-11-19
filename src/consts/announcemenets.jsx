@@ -1,3 +1,4 @@
+
 export const ANNOUNCEMENTS = {
   WELCOME: {
     title: "ברוכים הבאים ללבוקי!",
@@ -6,7 +7,7 @@ export const ANNOUNCEMENTS = {
   },
   REWARD: {
     title: "איזה כיף🎁",
-    message: "זכיתם! בואו לעמדת תצוגה לקבל את הפרס שלכם 😊",
+    message: "מחכה לכם שי קטן מלבוקי 😊",
     confirmText: "יש!!"
   }
 };  

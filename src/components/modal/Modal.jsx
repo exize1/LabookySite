@@ -20,7 +20,7 @@ export default function Modal({
   useEffect(() => {
     isWin && setNumberOfPieces(CONFETTI_PIECES);
 		const timer = setTimeout(() => {
-			setNumberOfPieces(30);
+			isWin &&setNumberOfPieces(100);
 		}, CONFETTI_DURATION * 1000);
 		return () => clearTimeout(timer);
 	}, [isOpen]);
