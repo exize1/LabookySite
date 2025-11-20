@@ -41,9 +41,11 @@ export default function Modal({
         className="modal-card"
         onClick={(e) => e.stopPropagation()}
       >
-        <h2 className="modal-title">{title}</h2>
-        <p className="modal-message">{message}
+        <h2 className="modal-title">{title}
           {isWin && <img src={LabookyIcon} width={25} height={25} className="labooky-icon" />}
+
+        </h2>
+        <p className="modal-message">{message}
         </p>
 
         <div className="modal-actions">

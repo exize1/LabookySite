@@ -6,8 +6,8 @@ export const ANNOUNCEMENTS = {
     confirmText: "סבבה"
   },
   REWARD: {
-    title: "איזה כיף🎁",
-    message: "מחכה לכם שי קטן מלבוקי",
+    title: "איזה כיף שאהבתם",
+    message: "מחכה לכם מזכרת קטנה מלבוקי 🎁",
     confirmText: "יש!!"
   }
 };  
