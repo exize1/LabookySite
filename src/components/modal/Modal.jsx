@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './Modal.css';
 import Confetti from "react-confetti";
+import LabookyIcon from "../../assets/LabookyIcon.svg";
 
 export default function Modal({
   isOpen,
@@ -41,7 +42,9 @@ export default function Modal({
         onClick={(e) => e.stopPropagation()}
       >
         <h2 className="modal-title">{title}</h2>
-        <p className="modal-message">{message}</p>
+        <p className="modal-message">{message}
+          {isWin && <img src={LabookyIcon} width={25} height={25} className="labooky-icon" />}
+        </p>
 
         <div className="modal-actions">
           {onConfirm && (
